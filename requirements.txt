@@ -1,4 +1,5 @@
-streamlit
+﻿streamlit>=1.58,<2
+uvicorn<0.49
 # Utilitites 
 numpy
 pandas
@@ -15,10 +16,12 @@ bcrypt
 
 
 
-segno
+qrcode
 pillow
 
 
 
 librosa
 resemblyzer
+imageio-ffmpeg
+
