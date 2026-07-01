@@ -21,10 +21,18 @@ except ImportError:
 
 def ensure_streamlit_runtime():
     if __name__ == "__main__" and get_script_run_ctx(suppress_warning=True) is None:
-        subprocess.run(
-            [sys.executable, "-m", "streamlit", "run", str(Path(__file__).resolve())],
-            check=False,
-        )
+        app_path = Path(__file__).resolve()
+        project_python = app_path.parent / "venv" / "Scripts" / "python.exe"
+        python = project_python if project_python.exists() else Path(sys.executable)
+
+        try:
+            subprocess.run(
+                [str(python), "-m", "streamlit", "run", str(app_path)],
+                check=False,
+            )
+        except KeyboardInterrupt:
+            # Ctrl+C is the normal way to stop the child Streamlit server.
+            pass
         raise SystemExit
 
 
@@ -55,11 +63,11 @@ if SUPABASE_CONFIG_ERROR:
     st.error(f"Supabase configuration error: {SUPABASE_CONFIG_ERROR}")
     st.write(
         "Open `.streamlit/secrets.toml` and replace the example values with "
-        "your Supabase project URL and API key."
+        "your Supabase project URL and service-role key."
     )
     st.code(
         'SUPABASE_URL = "https://your-project-ref.supabase.co"\n'
-        'SUPABASE_KEY = "your-real-supabase-key"',
+        'SUPABASE_SERVICE_ROLE_KEY = "your-service-role-key"',
         language="toml",
     )
     st.stop()

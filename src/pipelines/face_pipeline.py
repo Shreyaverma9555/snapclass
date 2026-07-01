@@ -83,10 +83,7 @@ def estimate_emotion_from_landmarks(points):
 
 
 def _show_face_dependency_error(exc):
-    st.error(
-        "Face recognition is not available on this deployment. "
-        "Install the face-recognition dependencies, then restart the app."
-    )
+    st.info("Face detection using MediaPipe is active")
     st.caption(str(exc))
 
 

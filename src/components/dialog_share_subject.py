@@ -1,34 +1,37 @@
-﻿import io
+import io
+from urllib.parse import quote
+
 import qrcode
 import streamlit as st
+
+from src.app_config import APP_URL
 
 
 @st.dialog("📤 Share Class Link")
 def share_subject_dialog(subject_name, subject_code):
-    # Create join URL
+    if not APP_URL:
+        st.error("APP_URL is missing. Add the public Streamlit URL to app secrets.")
+        return
+
     join_code = str(subject_code).strip()
-    join_url = f"{st.secrets['APP_URL']}/?join-code={join_code}"
+    join_url = f"{APP_URL}/?join-code={quote(join_code)}"
 
     st.subheader(f"📚 {subject_name}")
     st.header("Scan to Join")
 
-    # Generate QR Code
     qr = qrcode.make(join_url)
     out = io.BytesIO()
     qr.save(out, format="PNG")
     qr_image = out.getvalue()
 
-    # Layout
     col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("### 🔗 Join Link")
         st.code(join_url, language="text")
-
         st.markdown("### 🆔 Join Code")
         st.code(join_code, language="text")
-
-        st.info("Copy the link or join code and share it with your students via WhatsApp, Email, or any messaging platform.")
+        st.info("Share this link or join code with your students.")
 
     with col2:
         st.markdown("### 📱 QR Code")

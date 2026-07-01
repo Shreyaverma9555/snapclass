@@ -1,4 +1,4 @@
--- SnapClass database schema for Supabase.
+﻿-- SnapClass database schema for Supabase.
 -- Run this file in Supabase Dashboard > SQL Editor.
 
 create table if not exists public.teachers (
@@ -64,8 +64,9 @@ create index if not exists leave_requests_student_id_idx on public.leave_request
 create index if not exists leave_requests_subject_id_idx on public.leave_requests(subject_id);
 create index if not exists leave_requests_status_idx on public.leave_requests(status);
 
--- The current app performs its own login and accesses Supabase with the anon
--- key, so these prototype policies allow its required reads and writes.
+-- The Streamlit server connects with SUPABASE_SERVICE_ROLE_KEY. Browser users
+-- never receive that key. Deny direct public API access to classroom,
+-- credential, attendance, and biometric data.
 alter table public.teachers enable row level security;
 alter table public.students enable row level security;
 alter table public.subjects enable row level security;
@@ -74,29 +75,11 @@ alter table public.attendance_logs enable row level security;
 alter table public.leave_requests enable row level security;
 
 drop policy if exists "snapclass anon access" on public.teachers;
-create policy "snapclass anon access" on public.teachers
-    for all to anon using (true) with check (true);
-
 drop policy if exists "snapclass anon access" on public.students;
-create policy "snapclass anon access" on public.students
-    for all to anon using (true) with check (true);
-
 drop policy if exists "snapclass anon access" on public.subjects;
-create policy "snapclass anon access" on public.subjects
-    for all to anon using (true) with check (true);
-
 drop policy if exists "snapclass anon access" on public.subject_students;
-create policy "snapclass anon access" on public.subject_students
-    for all to anon using (true) with check (true);
-
 drop policy if exists "snapclass anon access" on public.attendance_logs;
-create policy "snapclass anon access" on public.attendance_logs
-    for all to anon using (true) with check (true);
-
 drop policy if exists "snapclass anon access" on public.leave_requests;
-create policy "snapclass anon access" on public.leave_requests
-    for all to anon using (true) with check (true);
 
-grant usage on schema public to anon;
-grant select, insert, update, delete on all tables in schema public to anon;
-grant usage, select on all sequences in schema public to anon;
+revoke all on all tables in schema public from anon;
+revoke all on all sequences in schema public from anon;

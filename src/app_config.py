@@ -1,8 +1,16 @@
-﻿import os
+import os
 
 import streamlit as st
 
 
-default_app_url = os.getenv("APP_URL") or "http://192.168.31.178:8501"
-APP_URL = str(st.secrets.get("APP_URL", default_app_url)).rstrip("/")
+def _setting(name):
+    try:
+        value = st.secrets.get(name, "")
+    except Exception:
+        value = ""
+    return str(value or os.getenv(name, "")).strip()
 
+
+# APP_URL must be the public HTTPS URL on Community Cloud so generated QR and
+# subject-join links work for other devices.
+APP_URL = _setting("APP_URL").rstrip("/")
