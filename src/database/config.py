@@ -1,7 +1,5 @@
-import httpx
 import streamlit as st
 from supabase import Client, create_client
-from supabase.lib.client_options import SyncClientOptions
 
 
 def _secret(name):
@@ -12,8 +10,6 @@ def _secret(name):
 
 
 SUPABASE_URL = _secret("SUPABASE_URL")
-# Community Cloud should use the service-role key. SUPABASE_KEY is retained as
-# a local-development fallback for existing installations.
 SUPABASE_KEY = _secret("SUPABASE_SERVICE_ROLE_KEY") or _secret("SUPABASE_KEY")
 
 
@@ -28,9 +24,12 @@ def get_supabase_config_error():
 
 
 SUPABASE_CONFIG_ERROR = get_supabase_config_error()
+supabase: Client | None = None
 
-supabase: Client = create_client(
-    SUPABASE_URL or "https://invalid.local",
-    SUPABASE_KEY or "invalid-key",
-    SyncClientOptions(httpx_client=httpx.Client(trust_env=False)),
-)
+# Never construct a client from placeholder values. The app displays a setup
+# page first, and database modules are lazy-loaded only after validation.
+if SUPABASE_CONFIG_ERROR is None:
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+    except Exception as exc:
+        SUPABASE_CONFIG_ERROR = f"Could not initialize Supabase: {exc}"

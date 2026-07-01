@@ -1,81 +1,8 @@
-﻿import subprocess
-import sys
-from pathlib import Path
-
 import streamlit as st
 from httpx import RequestError
 from postgrest.exceptions import APIError
-from streamlit.runtime.scriptrunner import get_script_run_ctx
-
-# Streamlit's Starlette server may receive Ctrl+C before Uvicorn startup has
-# created its instance-level ``servers`` list. Provide an empty fallback for
-# that early-shutdown path; normal Uvicorn startup replaces it on the instance.
-try:
-    from uvicorn import Server as UvicornServer
-
-    if not hasattr(UvicornServer, "servers"):
-        UvicornServer.servers = ()
-except ImportError:
-    pass
-
-
-def ensure_streamlit_runtime():
-    if __name__ == "__main__" and get_script_run_ctx(suppress_warning=True) is None:
-        app_path = Path(__file__).resolve()
-        project_python = app_path.parent / "venv" / "Scripts" / "python.exe"
-        python = project_python if project_python.exists() else Path(sys.executable)
-
-        try:
-            subprocess.run(
-                [str(python), "-m", "streamlit", "run", str(app_path)],
-                check=False,
-            )
-        except KeyboardInterrupt:
-            # Ctrl+C is the normal way to stop the child Streamlit server.
-            pass
-        raise SystemExit
-
-
-ensure_streamlit_runtime()
-
-
-def ensure_project_environment():
-    project_python = Path(__file__).resolve().parent / "venv" / "Scripts" / "python.exe"
-    running_python = Path(sys.executable).resolve()
-
-    if project_python.exists() and running_python != project_python.resolve():
-        st.set_page_config(page_title="SnapClass environment")
-        st.error("SnapClass is running from the wrong Python environment.")
-        st.write("You started Streamlit from Anaconda/base, but this project needs its local `venv` because it contains `dlib` and face-recognition dependencies.")
-        st.code(r".\venv\Scripts\python.exe -m streamlit run app.py", language="powershell")
-
-        st.stop()
-
-
-ensure_project_environment()
-
 
 from src.database.config import SUPABASE_CONFIG_ERROR
-
-
-if SUPABASE_CONFIG_ERROR:
-    st.set_page_config(page_title="SnapClass setup")
-    st.error(f"Supabase configuration error: {SUPABASE_CONFIG_ERROR}")
-    st.write(
-        "Open `.streamlit/secrets.toml` and replace the example values with "
-        "your Supabase project URL and service-role key."
-    )
-    st.code(
-        'SUPABASE_URL = "https://your-project-ref.supabase.co"\n'
-        'SUPABASE_SERVICE_ROLE_KEY = "your-service-role-key"',
-        language="toml",
-    )
-    st.stop()
-
-from src.components.dialog_auto_enroll import auto_enroll_dialog
-from src.screens.home_screen import home_screen
-from src.screens.student_screen import student_screen
-from src.screens.teacher_screen import teacher_screen
 
 
 def get_query_param(name):
@@ -93,59 +20,81 @@ def join_class(join_code):
     st.session_state["pending_join_code"] = join_code
     if st.session_state.get("login_type") != "student":
         st.session_state["login_type"] = "student"
-
-    # If a teacher shared a join link, auto-open the student's FaceID camera
-    # so the student can sign in immediately and be auto-enrolled after login.
     st.session_state.setdefault("student_login_camera_open", True)
     return join_code
+
+
+def show_setup_error():
+    st.error(f"Supabase configuration error: {SUPABASE_CONFIG_ERROR}")
+    st.write("Add these values in Streamlit Community Cloud → App settings → Secrets:")
+    st.code(
+        'SUPABASE_URL = "https://your-project-ref.supabase.co"\n'
+        'SUPABASE_SERVICE_ROLE_KEY = "your-service-role-key"\n'
+        'APP_URL = "https://your-app.streamlit.app"',
+        language="toml",
+    )
+
+
+def render_current_screen():
+    role = st.session_state.get("login_type")
+    if role == "teacher":
+        from src.screens.teacher_screen import teacher_screen
+
+        teacher_screen()
+    elif role == "student":
+        from src.screens.student_screen import student_screen
+
+        student_screen()
+    else:
+        from src.screens.home_screen import home_screen
+
+        home_screen()
 
 
 def main():
     st.set_page_config(
         page_title="SnapClass - Making Attendance faster using AI",
-        page_icon="assets/snapclass-college-icon.png"
-        
-    ) 
+        page_icon="assets/snapclass-college-icon.png",
+    )
 
-    if "login_type" not in st.session_state:
-        st.session_state["login_type"] = None
+    if SUPABASE_CONFIG_ERROR:
+        show_setup_error()
+        return
 
+    st.session_state.setdefault("login_type", None)
     join_code = get_query_param("join-code")
     if join_code:
         join_code = join_class(join_code)
 
     try:
-        match st.session_state["login_type"]:
-            case "teacher":
-                teacher_screen()
-            case "student":
-                student_screen()
-            case None:
-                home_screen()
+        render_current_screen()
+
+        if (
+            join_code
+            and st.session_state.get("is_logged_in")
+            and st.session_state.get("user_role") == "student"
+        ):
+            from src.components.dialog_auto_enroll import auto_enroll_dialog
+
+            auto_enroll_dialog(join_code)
     except RequestError:
         st.error(
-            "SnapClass could not connect to Supabase. Check your internet "
-            "connection and the SUPABASE_URL in `.streamlit/secrets.toml`."
+            "SnapClass could not connect to Supabase. Check SUPABASE_URL and "
+            "the project status, then reboot the app."
         )
-        return
     except APIError as exc:
-        if exc.code == "PGRST205":
+        if getattr(exc, "code", None) == "PGRST205":
             st.error(
-                "The Supabase database schema is missing. Run "
-                "`supabase_schema.sql` in the Supabase SQL Editor, then "
-                "refresh this page."
+                "The database schema is missing. Run supabase_schema.sql in "
+                "the Supabase SQL Editor, then refresh this page."
             )
-            return
-        raise
-
-    if (
-        join_code
-        and st.session_state.get("is_logged_in")
-        and st.session_state.get("user_role") == "student"
-    ):
-        auto_enroll_dialog(join_code)
+        else:
+            st.error(f"Supabase request failed: {exc}")
+    except Exception as exc:
+        # Keep recoverable app errors inside Streamlit instead of terminating
+        # the script with Community Cloud's generic 'Oh no' screen.
+        st.error("SnapClass encountered a startup error.")
+        st.exception(exc)
 
 
 main()
-
-
