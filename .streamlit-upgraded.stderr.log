@@ -11361,3 +11361,1521 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
   File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
 KeyError: 'src.database.config'
+2026-07-01 00:03:54.853 Script compilation error
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 660, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 98
+    page_icon="
+              ^
+SyntaxError: unterminated string literal (detected at line 98)
+2026-07-01 00:03:54.865 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-07-01 00:09:07.920 Script compilation error
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 660, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shrey\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 98
+    page_icon="assets/snapclass-college-icon.png
+              ^
+SyntaxError: unterminated string literal (detected at line 98)
+2026-07-01 00:09:07.924 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-07-01 00:12:25.038 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:12:26.857 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:12:30.713 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:14:15.083 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:14:28.957 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:17:52.576 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:17:52.973 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:17:53.122 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:17:53.302 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:17:53.472 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:17:54.993 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:18:07.006 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:18:07.433 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 17
+    st.header("Scan to Join")
+    ^^
+IndentationError: expected an indented block after 'else' statement on line 14
+2026-07-01 00:18:07.561 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 17
+    st.header("Scan to Join")
+    ^^
+IndentationError: expected an indented block after 'else' statement on line 14
+2026-07-01 00:18:07.702 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 17
+    st.header("Scan to Join")
+    ^^
+IndentationError: expected an indented block after 'else' statement on line 14
+2026-07-01 00:18:08.949 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:18:47.665 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:18:48.002 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.143 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.269 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.404 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.530 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.669 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.803 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:48.923 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:49.065 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 12
+2026-07-01 00:18:56.459 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:18:56.783 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:56.924 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:57.823 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:18:58.136 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:58.247 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:58.386 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:58.524 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:58.652 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:58.778 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:58.905 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:59.036 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:18:59.188 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 15
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 13
+2026-07-01 00:19:19.881 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:19:20.279 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 16
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 14
+2026-07-01 00:19:20.397 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 16
+    else:
+    ^^^^
+IndentationError: expected an indented block after 'if' statement on line 14
+2026-07-01 00:19:20.887 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:19:21.276 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:21.400 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:21.538 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:21.696 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:21.844 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:21.953 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:22.091 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:22.234 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:22.381 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:25.806 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:19:26.060 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:26.215 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:27.442 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:19:27.762 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:27.912 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.034 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.157 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.296 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.420 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.539 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.678 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:19:28.823 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    host = st.context.headers.get("host", "localhost:8501")
+IndentationError: unexpected indent
+2026-07-01 00:21:19.752 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:21:20.136 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:21:20.304 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 14
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:32.021 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:25:40.017 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:25:40.396 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:40.570 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:47.083 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:25:47.521 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:47.644 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:47.781 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:47.902 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:48.017 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:48.149 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:48.268 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:48.392 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:48.508 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 11
+    st.header("Scan to Join")
+IndentationError: unexpected indent
+2026-07-01 00:25:54.637 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:25:54.930 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    qr = qrcode.make(join_url)
+IndentationError: unexpected indent
+2026-07-01 00:25:55.065 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+  File "A:\snapclass\src\components\dialog_share_subject.py", line 13
+    qr = qrcode.make(join_url)
+IndentationError: unexpected indent
+2026-07-01 00:27:04.404 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
+2026-07-01 00:27:04.816 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:04.989 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:05.161 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:05.330 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:05.496 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:05.680 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:05.860 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:06.043 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:06.210 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:06.380 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:06.556 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:06.724 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:06.905 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 70, in <module>
+    from src.screens.teacher_screen import teacher_screen
+  File "A:\snapclass\src\screens\teacher_screen.py", line 11, in <module>
+    from src.components.dialog_share_subject import share_subject_dialog
+ImportError: cannot import name 'share_subject_dialog' from 'src.components.dialog_share_subject' (A:\snapclass\src\components\dialog_share_subject.py)
+2026-07-01 00:27:07.433 Uncaught app execution
+Traceback (most recent call last):
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "A:\snapclass\venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 789, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "A:\snapclass\app.py", line 50, in <module>
+    from src.database.config import SUPABASE_CONFIG_ERROR
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 701, in _load_unlocked
+KeyError: 'src.database.config'
