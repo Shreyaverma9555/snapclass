@@ -1,27 +1,26 @@
-﻿streamlit>=1.58,<2
+﻿streamlit>=1.30,<2
 uvicorn<0.49
-# Utilitites 
+
+# Core utilities
 numpy
 pandas
-
-# FACE RECOGNITION
 scikit-learn
-dlib-bin
-git+https://github.com/ageitgey/face_recognition_models
-setuptools<70.0.0
 
+# Face recognition stack (Streamlit-safe versions)
+face_recognition
+dlib
+opencv-python
 
+# Data / backend
 supabase
 bcrypt
 
-
-
+# QR & image/audio
 qrcode
 pillow
-
-
-
+imageio-ffmpeg
 librosa
 resemblyzer
-imageio-ffmpeg
 
+# Build tools
+setuptools<70
