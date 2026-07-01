@@ -1,32 +1,12 @@
-# Streamlit Community Cloud (Python 3.11)
-streamlit==1.58.0
-uvicorn==0.48.0
-
-# Core data and ML
-numpy==2.4.6
-pandas==3.0.3
-scikit-learn==1.9.0
-
-# Face recognition: prebuilt dlib avoids compiling C++ on Community Cloud
-dlib-bin==19.24.6
-face_recognition_models==0.3.0
-
-# Database and authentication
-supabase==2.31.0
-bcrypt==5.0.0
-
-# CPU-only PyTorch keeps the Community Cloud image smaller
---extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.5.1+cpu
-
-# QR, images, and voice
-qrcode==8.2
-pillow==12.2.0
-imageio-ffmpeg==0.6.0
-librosa==0.11.0
-resemblyzer==0.1.4
-webrtcvad==2.0.10
-typing==3.7.4.3
-
-# face_recognition_models still imports pkg_resources
-setuptools==69.5.1
+﻿streamlit==1.58.0
+opencv-python
+mediapipe==0.10.14
+numpy
+pandas
+pillow
+supabase
+bcrypt
+qrcode
+librosa
+resemblyzer
+imageio-ffmpeg
