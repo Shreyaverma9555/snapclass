@@ -5,91 +5,89 @@ import numpy as np
 import streamlit as st
 
 
-@st.cache_resource
-def load_voice_encoder():
-    try:
-        from resemblyzer import VoiceEncoder
-    except ModuleNotFoundError:
-        st.error("Voice attendance requires the 'resemblyzer' package. Install it with: pip install resemblyzer")
-        return None
-    return VoiceEncoder()
+VOICE_SAMPLE_RATE = 16000
+VOICE_EMBEDDING_SIZE = 80
 
 
-def _preprocess_wav(audio):
-    try:
-        from resemblyzer import preprocess_wav
-    except ModuleNotFoundError:
-        st.error("Voice attendance requires the 'resemblyzer' package. Install it with: pip install resemblyzer")
+def _normalize(vector):
+    vector = np.asarray(vector, dtype=np.float32)
+    norm = np.linalg.norm(vector)
+    return vector / norm if norm > 0 else vector
+
+
+def _embedding_from_audio(audio):
+    """Create a small, deployment-friendly MFCC speaker embedding."""
+    audio = np.asarray(audio, dtype=np.float32)
+    audio, _ = librosa.effects.trim(audio, top_db=30)
+    if len(audio) < VOICE_SAMPLE_RATE // 2:
         return None
-    return preprocess_wav(audio)
+
+    mfcc = librosa.feature.mfcc(
+        y=audio,
+        sr=VOICE_SAMPLE_RATE,
+        n_mfcc=40,
+        n_fft=512,
+        hop_length=160,
+    )
+    embedding = np.concatenate((mfcc.mean(axis=1), mfcc.std(axis=1)))
+    return _normalize(embedding)
 
 
 def get_voice_embedding(audio_bytes):
     try:
-        encoder = load_voice_encoder()
-        if encoder is None:
+        audio, _ = librosa.load(io.BytesIO(audio_bytes), sr=VOICE_SAMPLE_RATE, mono=True)
+        embedding = _embedding_from_audio(audio)
+        if embedding is None:
+            st.error("Please record at least half a second of clear speech.")
             return None
-
-        audio, _ = librosa.load(io.BytesIO(audio_bytes), sr=16000)
-        wav = _preprocess_wav(audio)
-        if wav is None:
-            return None
-
-        embedding = encoder.embed_utterance(wav)
         return embedding.tolist()
-    except Exception as e:
-        st.error(f"Voice recognition error: {e}")
+    except Exception as exc:
+        st.error(f"Voice recognition error: {exc}")
         return None
 
 
-def identify_speaker(new_embedding, candidates_dict, threshold=0.65):
+def identify_speaker(new_embedding, candidates_dict, threshold=0.82):
     if new_embedding is None or not candidates_dict:
         return None, 0.0
 
-    new_embedding = np.asarray(new_embedding, dtype=float)
+    new_embedding = _normalize(new_embedding)
     best_sid = None
     best_score = -1.0
 
     for sid, stored_embedding in candidates_dict.items():
-        if stored_embedding:
-            stored_embedding = np.asarray(stored_embedding, dtype=float)
-            similarity = float(np.dot(new_embedding, stored_embedding))
-            if similarity > best_score:
-                best_score = similarity
-                best_sid = sid
+        if not stored_embedding:
+            continue
+        stored_embedding = np.asarray(stored_embedding, dtype=np.float32)
+        # Ignore embeddings created by an older, incompatible voice model.
+        if stored_embedding.shape != new_embedding.shape:
+            continue
+        score = float(np.dot(new_embedding, _normalize(stored_embedding)))
+        if score > best_score:
+            best_score = score
+            best_sid = sid
 
     if best_score >= threshold:
         return best_sid, best_score
-
     return None, best_score
 
 
-def process_bulk_audio(audio_bytes, candidates_dict, threshold=0.65):
+def process_bulk_audio(audio_bytes, candidates_dict, threshold=0.82):
     try:
-        encoder = load_voice_encoder()
-        if encoder is None:
-            return {}
-
-        audio, sr = librosa.load(io.BytesIO(audio_bytes), sr=16000)
+        audio, sr = librosa.load(io.BytesIO(audio_bytes), sr=VOICE_SAMPLE_RATE, mono=True)
         segments = librosa.effects.split(audio, top_db=30)
         identified_results = {}
 
         for start, end in segments:
-            if (end - start) < sr * 0.5:
+            if end - start < sr * 0.5:
                 continue
-
-            segment_audio = audio[start:end]
-            wav = _preprocess_wav(segment_audio)
-            if wav is None:
-                return {}
-
-            embedding = encoder.embed_utterance(wav)
+            embedding = _embedding_from_audio(audio[start:end])
+            if embedding is None:
+                continue
             sid, score = identify_speaker(embedding, candidates_dict, threshold)
-
-            if sid and (sid not in identified_results or score > identified_results[sid]):
+            if sid is not None and score > identified_results.get(sid, -1.0):
                 identified_results[sid] = score
 
         return identified_results
-    except Exception as e:
-        st.error(f"Bulk voice processing error: {e}")
+    except Exception as exc:
+        st.error(f"Bulk voice processing error: {exc}")
         return {}

@@ -1,12 +1,23 @@
-﻿streamlit==1.58.0
-opencv-python
-mediapipe==0.10.14
-numpy
-pandas
-pillow
-supabase
-bcrypt
-qrcode
-librosa
-resemblyzer
-imageio-ffmpeg
+# Streamlit Community Cloud â€” select Python 3.11 in Advanced settings
+streamlit==1.58.0
+
+# Data and ML (all have Linux/Python 3.11 wheels)
+numpy==2.2.6
+pandas==2.3.2
+scikit-learn==1.7.2
+
+# Face recognition without compiling dlib from source
+dlib-bin==19.24.6
+face_recognition_models==0.1.3
+setuptools==69.5.1
+
+# Backend and UI features
+supabase==2.31.0
+bcrypt==5.0.0
+qrcode==8.2
+pillow==12.2.0
+
+# Lightweight voice embeddings (no torch/webrtcvad native build)
+librosa==0.11.0
+soundfile==0.14.0
+imageio-ffmpeg==0.6.0
