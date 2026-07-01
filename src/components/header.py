@@ -1,9 +1,12 @@
 import streamlit as st
 
+from src.ui.assets import static_data_uri
 
-COLLEGE_ICON_HTML = """
-<img class="snap-college-icon" src="/app/static/snapclass-college-icon.png" alt="College icon" />
+
+COLLEGE_ICON_HTML = f"""
+<img class="snap-college-icon" src="{static_data_uri('snapclass-college-icon.png')}" alt="College icon" />
 """
+HERO_IMAGE_URL = static_data_uri("snapclass-generated-top-hero-large.png")
 SNAPCLASS_TITLE_STYLE = """
 <style>
     .snap-top-hero-art {
@@ -301,7 +304,7 @@ def header_home():
                 <span class="snap-ai-badge">{COLLEGE_ICON_HTML}</span>
             </div>
             <div class="snap-top-hero-art">
-                <img src="/app/static/snapclass-generated-top-hero-large.png?v=8" alt="Every Presence Creates Progress - SnapClass AI classroom intelligence" />
+                <img src="{HERO_IMAGE_URL}" alt="Every Presence Creates Progress - SnapClass AI classroom intelligence" />
                 <div class="snap-hero-visuals" aria-hidden="true"><i class="snap-hero-spark"></i><i class="snap-hero-spark"></i><i class="snap-hero-spark"></i><i class="snap-hero-spark"></i><i class="snap-hero-spark"></i><span class="snap-hero-orbit"></span><span class="snap-hero-sheen"></span></div>
             </div>
         </div>

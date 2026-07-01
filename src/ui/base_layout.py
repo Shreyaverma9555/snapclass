@@ -2,13 +2,10 @@
 
 import streamlit as st
 
+from src.ui.assets import static_data_uri
 
-# Background photo file is stored in: static/classroom-group-light-animated.png
-# Open this URL in browser to access the photo directly:
-# http://localhost:8501/app/static/classroom-group-light-animated.png
-BACKGROUND_IMAGE_FILE = "classroom-group-light-animated.png"
-BACKGROUND_IMAGE_URL = f"/app/static/{BACKGROUND_IMAGE_FILE}"
-BACKGROUND_IMAGE_ACCESS_URL = f"http://localhost:8501{BACKGROUND_IMAGE_URL}"
+
+BACKGROUND_IMAGE_URL = static_data_uri("classroom-group-light-animated.png")
 
 _BACKGROUND_CSS = """
 <style>
