@@ -1,4 +1,0 @@
-# Native runtime/build libraries installed by Streamlit Community Cloud
-build-essential
-ffmpeg
-libsndfile1
